@@ -13,8 +13,8 @@ import vercel from '@astrojs/vercel/serverless'
 
 const siteUrl =
   process.env.VERCEL_ENV === 'production'
-    ? 'https://astro-launchpad.vercel.app/' // 'your.prod.domain.here'
-    : 'http://localhost:3000/'
+    ? 'https://astro-cards-server-rvl1.vercel.app/' // 'your.prod.domain.here'
+    : 'http://localhost:4321/'
 
 // https://astro.build/config
 export default defineConfig({
@@ -56,7 +56,7 @@ export default defineConfig({
     // generates a manifest.json for PWA support,
     // see: https://github.com/alextim/astro-lib/tree/main/packages/astro-webmanifest
     webmanifest({
-      name: 'astro-launchpad',
+      name: 'astro-cards',
       icon: './public/favicon.svg',
       start_url: siteUrl,
       display: 'standalone',
