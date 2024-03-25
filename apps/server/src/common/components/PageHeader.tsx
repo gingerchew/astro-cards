@@ -1,4 +1,4 @@
-import { AuthState, getAuthState, anonymousUserAuthState } from '@packages/auth'
+import { type AuthState, getAuthState, anonymousUserAuthState } from '@packages/auth'
 import { useState } from 'preact/hooks'
 import { useEffect } from '@packages/reactive'
 import { LoginButton } from './LoginButton'

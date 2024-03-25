@@ -4,7 +4,6 @@ import serviceWorker from 'astrojs-service-worker'
 import robotsTxt from 'astro-robots-txt'
 import webmanifest from 'astro-webmanifest'
 import sitemap from 'astro-sitemap'
-import image from '@astrojs/image'
 import astroI18next from 'astro-i18next'
 import purgecss from 'astro-purgecss'
 import { apiClientGenerator } from '@jsheaven/astro-client-generator'
@@ -61,11 +60,6 @@ export default defineConfig({
       icon: './public/favicon.svg',
       start_url: siteUrl,
       display: 'standalone',
-    }),
-
-    // support for <Image> and <Picture> using sharp for optimization
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
     }),
 
     // generates ./src/pages/api-client/* microservice clients
